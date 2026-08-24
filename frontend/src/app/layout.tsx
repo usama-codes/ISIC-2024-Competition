@@ -4,6 +4,7 @@ import "./globals.css";
 import { AuthProvider } from "@/context/AuthContext";
 import { AnalysisProvider } from "@/context/AnalysisContext";
 import AppShell from "@/components/AppShell";
+import { Analytics } from "@vercel/analytics/next";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -57,6 +58,7 @@ export default function RootLayout({
             </AppShell>
           </AnalysisProvider>
         </AuthProvider>
+        <Analytics />
       </body>
     </html>
   );
